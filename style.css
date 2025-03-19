@@ -1,3 +1,4 @@
+/* STYLE RESET */
 *,
 *::before,
 *::after {
@@ -19,7 +20,7 @@ dl,
 dd {
   margin: 0;
 }
-ul, ol {
+ul, ol, li {
     list-style: none; /* Убираем маркеры/номера */
     padding: 0;      /* Убираем внутренние отступы */
     margin: 0;       /* Убираем внешние отступы */
@@ -29,14 +30,8 @@ a:hover,  /* при наведении */
 a {
   text-decoration: none;
 }
-li {
-    margin: 0;       /* Убираем внешние отступы у элементов списка */
-    padding: 0;      /* Убираем внутренние отступы у элементов списка */
-}
-a{
-   padding: 5px;
-   border-radius: 50px;
-}
+
+/* TAG STYLE */
 a:hover{
     background-color: rgb(255, 0, 221);
     cursor: copy;
@@ -46,7 +41,7 @@ a:active{
     color: rgb(255, 213, 0);
 }
 body{
-
+    
     background-color: rgb(203, 200, 200);
 }
 header{ 
@@ -54,22 +49,13 @@ header{
     background-color: rgb(95, 95, 237);
     color: aquamarine;
 }
-nav{
-    height: 100%;
-}
-ul{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-    gap: 10px;
-}
 main{
     height: calc(100vh - 200px);
-    background-color: blanchedalmond;
-    color: rgb(86, 11, 157);
+    background-color: rgb(244, 239, 232);
     margin: 20px;
     padding: 20px;
+    border-radius: 26px;
+    line-height: 30px;
 }
 h1{
     margin-bottom: 20px;
@@ -83,3 +69,55 @@ footer{
     gap: 25px;
     align-items: center;
 }
+
+/* CLASS STYLE */
+.views {
+    background-color: green; 
+    border-radius: 12px;
+}
+.position {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+.fire{
+    color: tomato;
+}
+.expirience {
+    font-size: small;
+    font-family: ms sans serif; 
+    color: rgb(76, 76, 76); 
+    background-color: rgb(211, 211, 211); 
+    border-radius: 7px; 
+    padding: 5px 11px;
+    margin: 4px 0; 
+    width: fit-content;
+}
+.company {
+    font-family: ms sans serif
+}
+.city {
+    font-family: ms sans serif
+}
+.reply {
+    background: #0005f2; 
+    color: #fff; 
+    border: none; 
+    border-radius: 10px; 
+    padding: 1rem 1.5rem; 
+    margin-bottom: 1rem; 
+    cursor: pointer; 
+}  
+.footer-link{
+       padding: 5px;
+       border-radius: 50px;
+    }
+.nav{
+        height: 100%;
+    }
+.link-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        gap: 10px;
+    }
