@@ -1,0 +1,155 @@
+/* STYLE RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ul, ol, li {
+    list-style: none; /* Убираем маркеры/номера */
+    padding: 0;      /* Убираем внутренние отступы */
+    margin: 0;       /* Убираем внешние отступы */
+}
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+}
+.second-card{
+    background-color: #0005f2;
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 600px;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+.child{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(222, 107, 136);
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px ;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(251, 255, 0);
+}  
+.container{
+   height: 300px;
+   width: 100%;
+   background-color: bisque;
+   display: flex;
+   align-items: center;
+   border: 1px dashed black;
+}
+.circle{
+    background-color: blueviolet;
+    animation-duration: 7s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+
+}
+.scrollable{
+    display: block;
+    overflow-y: auto ;
+}
+.scrollable::-webkit-scrollbar {
+    width: 12px;               /* ширина всей полосы прокрутки */
+  }
+  
+.scrollable::-webkit-scrollbar-track {
+    background: orange;        /* цвет зоны отслеживания */
+    border-radius: 12px;
+  }
+  
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: blue;    /* цвет бегунка */
+    border-radius: 20px;       /* округлось бегунка */
+    border: 3px solid orange;  /* отступ вокруг бегунка */
+  
+  
+}
+.item{
+   padding: 50px 0; 
+}
+  @keyframes slidein {
+   0% {
+      width: 100px;
+      height: 100px;
+
+    }
+  
+    50% {
+    width: 500px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #0005f2;
+    }
+    100%{
+        width: 100px;
+        height: 100px;
+        border-radius: 0%;
+        background-color: black;
+    }
+  }
+  .circle-anim{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    border-radius: 20%;
+
+    animation: anim 1s;
+    animation-name: anim;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  @keyframes anim{
+    50% {
+      rotate: 45deg;
+    }
+
+    100% {
+      translate: 75vw;
+    }
+  }
+  .box-1{
+    background-color: aquamarine;
+    width: 200px;
+    height: 200px;
+
+  }
+  .box-2{
+    background-color: bisque;
+    height: 200px;
+    width: 200px;
+  }
+  .box-3{
+    background-color: blueviolet;
+    width: 200px;
+    height: 200px;
+  }
+  .box-4{
+    background-color: blanchedalmond;
+    width: 200px;
+    height: 200px;
+  }

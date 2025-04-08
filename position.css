@@ -1,0 +1,31 @@
+.square{
+    width: 100vw;
+    height: 200px;
+    background-color: blueviolet;
+}
+.box{
+    background-color: rgb(247, 167, 63);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.child{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: aliceblue;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.second-child{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(17, 255, 0);
+    color: aliceblue;
+    text-align: center;
+    position: relative;
+    top: 50px;
+}

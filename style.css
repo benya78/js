@@ -136,12 +136,14 @@ button:hover {
     }
 .second-card{
     border: 1px solid rgb(255, 0, 51);
+    background-color: #0005f2;
     border-radius: 10px; 
     display: flex;
     gap: 10px;
-    padding: 10px;
     margin: 10px 0;
-    flex-wrap: wrap;
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 .child{
     width: 200px;
@@ -154,4 +156,4 @@ button:hover {
     font-size: 45px ;
     font-family: 'Courier New', Courier, monospace;
     color: rgb(251, 255, 0);
-}    
+}  
