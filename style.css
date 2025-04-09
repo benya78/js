@@ -50,6 +50,7 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 2;
 }
 main{
     min-height: calc(100vh - 200px);
@@ -59,6 +60,10 @@ main{
     border-radius: 26px;
     line-height: 30px;
     margin-top: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 10px;
 
 }
 h1{
@@ -144,5 +149,18 @@ button:hover {
         align-items: center;
         height: 100%;
         gap: 10px;
+    }
+    #unique{
+       background-color: rgb(102, 187, 247);
+       position: relative;
+       left: 50px;
+       top: 50px;
+       z-index: 1;
+    }
+    @media (max-width: 768px) {
+        main {
+            background-color: rgb(255, 171, 67);
+            flex-direction: column;
+        }
     }
 
