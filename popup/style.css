@@ -1,3 +1,36 @@
+/* STYLE RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ul, ol, li {
+    list-style: none; /* Убираем маркеры/номера */
+    padding: 0;      /* Убираем внутренние отступы */
+    margin: 0;       /* Убираем внешние отступы */
+}
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+}
+
 html{
     box-sizing: border-box;
 }
@@ -13,7 +46,22 @@ img {
     max-width: 100%;
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto" , sans-serif;
+}
+.nav {
+    position: absolute;
+    left: -350px;
+    top: 0;
+    width: 350px;
+    background-color: blueviolet;
+    padding: 70px 20px 20px 20px;
+    
+}
+.link-container {
+    color: white;
+    font-size: 21px;
+    display: block;
+    padding: 10px 10px;
 }
 .container {
     max-width: 1200px;
@@ -46,6 +94,7 @@ body {
     box-shadow: 0px 0px 17px -11px rgba(34, 60, 80, 0.2);
     transform: scale(0);
     transition: transform .8s;
+    border-radius: 5px;
 }
 .modal-close-btn {
     position: absolute;
@@ -62,4 +111,11 @@ body {
 }
 .modal.open .modal_box{
     transform: scale(1);
+}
+.button-m {
+    background-color: #e05757;
+    border-radius: 5px;
+    padding: 10px;
+    border: 0;
+    box-shadow: 0px 0px 22px 8px rgba(224, 87, 87, 0.2); 
 }
