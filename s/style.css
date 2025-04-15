@@ -1,0 +1,99 @@
+
+/* STYLE RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ul, ol, li {
+    list-style: none; /* Убираем маркеры/номера */
+    padding: 0;      /* Убираем внутренние отступы */
+    margin: 0;       /* Убираем внешние отступы */
+}
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+}
+
+html{
+    box-sizing: border-box;
+}
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: url(../img/stena_kirpichi_tekstura_117134_3840x2400.jpg) no-repeat;
+    background-size: cover;
+}
+.header {
+    width: 100vw;
+    height: 30px;
+    background-color: hsla(39, 100%, 50%, 0.544);
+}
+.telo {
+    height: 500px;
+    background-color: hsla(0, 0%, 20%, 0.663);
+    margin: 150px 10px 10px 10px;
+    border-radius: 10px;
+}
+.menu-container {
+    position: relative;
+    width: 200px;
+  }
+
+  .menu-button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ecf0f1;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.6s ease;
+  }
+
+  .menu-container:hover .dropdown-menu {
+    max-height: 300px; /* Подберите нужную высоту под ваше содержимое */
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #bdc3c7;
+  }
+  .menu-link {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: larger;
+  }
