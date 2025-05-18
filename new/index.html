@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../new/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<header>
+    <div class="burger-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</header>
+<nav class="side-menu">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Setting</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
+<body>
+    <div class="divbox">
+        <div class="box">
+            <div class="boxline">
+                <div class="boxmenu">
+                    <a href="">Open</a>
+                    <a href="">Exit</a>
+                    <a href="">Pictures</a>
+                    <a href="">Settings</a>
+                    <a href="">Contacts</a>
+                </div>
+            </div>
+            <div class="boxline2" >
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+
+            </div>
+
+        </div>
+       
+    </div>
+    
+    <script>
+        const burgerMenu = document.querySelector('.burger-menu');
+        const sideMenu = document.querySelector('.side-menu');
+    
+        burgerMenu.addEventListener('click', (event) => {
+            event.stopPropagation(); // Остановить всплытие события
+            burgerMenu.classList.toggle('active');
+            sideMenu.classList.toggle('open');
+    
+            // Скрыть бургер-меню после нажатия
+            if (sideMenu.classList.contains('open')) {
+                setTimeout(() => {
+                    burgerMenu.classList.add('open');
+                }, 300); // Задержка для завершения анимации
+            } else {
+                burgerMenu.classList.remove('hidden');
+            }
+        });
+    
+        // Закрыть меню при клике на пустое место
+        document.addEventListener('click', (event) => {
+            if (!sideMenu.contains(event.target) && !burgerMenu.contains(event.target)) {
+                sideMenu.classList.remove('open');
+                burgerMenu.classList.remove('active');
+                burgerMenu.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

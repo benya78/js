@@ -1,0 +1,212 @@
+/* STYLE RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ul, ol, li {
+    list-style: none; /* Убираем маркеры/номера */
+    padding: 0;      /* Убираем внутренние отступы */
+    margin: 0;       /* Убираем внешние отступы */
+}
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+}
+
+body {
+    background: url(../img/vetki_girlianda_el_118627_1280x720.jpg) no-repeat;
+    background-size: cover;
+    background-position: no-repeat;
+}
+.divbox {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+.box {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 30px;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    box-shadow: 0px 0px 40px 40px rgba(0, 0, 0, 0.53);
+    padding: 10px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.burger-menu .line {
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.5s ease;
+    z-index: 999;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin: 15px 0;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.side-menu.open {
+    left: 0;
+}
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 1001;
+}
+
+.burger-menu .line {
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.5s ease;
+}
+
+.burger-menu.active .line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    width: 30px;
+}
+
+.burger-menu.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+    width: 30px;
+}
+.burger-menu.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 1s ease;
+    z-index: 999;
+    border: 3px solid transparent;
+}
+
+.side-menu.open {
+    left: 0;
+    border: 0px  rgba(0, 0, 0, 0.31);
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.571);  
+}
+.boxline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+.boxmenu {
+    gap: 60px;
+    display: flex;
+    color: whitesmoke;
+}
+.boxmenu a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.boxline2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.53);
+    border-radius: 30px;
+    margin-top: 20px;
+}
+.input-box input {
+    display: flex;
+    width: 200px;
+    height: 25px;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+}
+
