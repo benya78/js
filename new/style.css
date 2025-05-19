@@ -54,10 +54,7 @@ body {
 }
 header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 5px 5px;
-    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -179,10 +176,11 @@ header {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 30px;
+    
 }
 .boxmenu {
-    gap: 60px;
     display: flex;
+    gap: 60px;
     color: whitesmoke;
 }
 .boxmenu a {
@@ -193,20 +191,27 @@ header {
 }
 .boxline2 {
     display: flex;
-    align-items: center;
-    justify-content: center;
     height: 40px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.53);
     border-radius: 30px;
-    margin-top: 20px;
 }
 .input-box input {
     display: flex;
+    position:absolute;
+    flex-direction: row;
+    right: 0;
     width: 200px;
     height: 25px;
+    border: none;
     background-color: transparent;
     color: white;
     border-radius: 10px;
+    margin: 10px;
 }
-
+.input-box input::placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    color: antiquewhite;
+}
