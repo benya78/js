@@ -34,7 +34,6 @@ a {
 body {
     background: url(../img/vetki_girlianda_el_118627_1280x720.jpg) no-repeat;
     background-size: cover;
-    background-position: no-repeat;
 }
 .divbox {
     display: flex;
@@ -44,6 +43,9 @@ body {
     padding: 50px 10px;
 }
 .box {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
     width: 100vw;
     height: 100vh;
     border-radius: 30px;
@@ -184,6 +186,7 @@ header {
     display: flex;
     gap: 60px;
     color: whitesmoke;
+    text-decoration: none;
 }
 .boxmenu a {
     color: whitesmoke;
@@ -201,6 +204,20 @@ header {
     border-radius: 30px;
     gap: 20px;
 }
+.wrapper {
+   color:rgba(226, 226, 226, 0.697); 
+   font-size: 14px;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.window {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.529);
+    margin: 10px 5px;
+    border-radius: 10px;
+}
+
 .input-box input {
     width: 200px;
     height: 25px;
@@ -215,6 +232,26 @@ header {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 10px;
 }
+.remember {
+    color: white;
+    position: absolute;
+    top: 130px;
+    left: 20px;
+}
+.register-link {
+ color: white;
+ display: flex;
+ position: fixed;
+ bottom: 20px;
+ left: 50px;
+}
+.btn {
+    position: static;
+    width: 250px;
+    height: 24px;
+    cursor: pointer;
+    border-radius: 10px;
+}
 
 .menu-container {
     position: fixed;
@@ -226,31 +263,32 @@ header {
     position: absolute;
     top: 2px;
     right: 2px;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     opacity: 0;
     z-index: 3;
     cursor: pointer;
 }
 .hamburger {
     position: absolute;
-    top: -12px;
-    right: -8px;
+    top: -1px;
+    right: 3px;
     width: 52px;
     height: 52px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
-
 }
 .hamburger>div{
     position: absolute;
-    width: 60%;
-    height: 3px;
-    border-radius: 1.5px;
-    background-color: #ffffff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
     transition: .4s;
+    border: red solid;
+    
 }
 .hamburger>div::before, .hamburger>div::after{
     content: '';
@@ -258,14 +296,21 @@ header {
     width: 100%;
     height: 3px;
     border-radius: 1.5px;
-    background-color: #ffffff;
+    background-color: transparent;
     transition: .4s;
 }
 .hamburger>div::before {
-    top: -10px;
+    top: -7px;
+    right: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: red solid;
 }
 .hamburger>div::after {
     top: 10px;
+    opacity: 0;
+    background-color: black;
 }
 .toggler:checked + .hamburger>div {
     transform: rotate(135deg);
@@ -288,8 +333,8 @@ header {
 }
 .menu {
     position: fixed;
-    top: -105px;
-    right: -142px;
+    top: 0px;
+    right: 0px;
     width: 100vw;
     height: 100vh;
     visibility: hidden;
@@ -300,14 +345,14 @@ header {
     width: 300px;
     height: 220px;
     border-radius: 20px;
-    top: 220px;
-    right: 0;
-    transform: translateX(-50%) translateY(-150%);
+    top: 120px;
+    right: -135px;
+    transform: translateX(100%) translateY(-200%);
     background-color: rgba(0, 0, 0, 0.52);
     transition: .6s;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     
 }
 .menu > div > div {
@@ -336,3 +381,24 @@ header {
     color: #fdfdfd;
 
 }
+
+.star {
+  position: absolute;
+  color: gold;
+  font-size: 20px;
+  animation: fly 1s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes fly {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--dx), var(--dy)) scale(0.5);
+  }
+}
+
+

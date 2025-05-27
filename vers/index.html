@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../vers/style.css">
-    <head>
-</head>
-<header>
-    <div class="header">
-        <li class="menu">
-            <a href="">Новости</a>
-            <a href="">Меню</a>
-            <a href="">Настройки</a>
-            <a href="">О нас</a>
-        </li>
-    </div>
-</header>
-
-<body>
+<head>
+  <meta charset="UTF-8">
+  <title>Button to Window Animation</title>
+  <link rel="stylesheet" href="../vers/style.css">
+  <style>
     
+  </style>
+</head>
+<body>
+
+  <button class="circle-button" id="expandButton"></button>
+  <div class="modal-content">
+    <h2>Модальное окно</h2>
+    <p>Содержимое здесь...</p>
+  </div>
+
+  <script>
+    const button = document.getElementById('expandButton');
+
+    button.addEventListener('click', () => {
+      button.classList.toggle('expand');
+    });
+  </script>
+
 </body>
 </html>
